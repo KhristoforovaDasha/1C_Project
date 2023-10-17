@@ -21,10 +21,8 @@ int find_no_infect(const vector<vertex_score>& vertexes_scores, vector<uint8_t>&
   if (ind < vertex_num) {
     infect[vertexes_scores[ind].vertex] = 1;
     inflect_vertexes.push_back(vertexes_scores[ind].vertex);
-    return ind;
-  } else {
-    return -1;
   }
+  return ind;
 }
 
 int infect_component(const Graph& graph, int vertex, vector<uint8_t>& used, vector<int>& infect) {
